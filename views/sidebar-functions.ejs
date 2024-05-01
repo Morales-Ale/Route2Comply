@@ -1,0 +1,24 @@
+<script>
+
+    document.getElementById('header-menu-icon').addEventListener('click', function() {
+            document.body.classList.toggle('sidebar-open');
+      });
+
+    
+    document.querySelectorAll('.nav-link').forEach(function(navLink) {
+        navLink.addEventListener('click', function(event) {
+          document.body.classList.toggle('sidebar-open');
+        
+        });
+      });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const url= window.location.pathname;
+      if(url=='/about'){
+
+        document.querySelectorAll('.services').forEach((function(x){ x.setAttribute("href","/#services");}))
+        document.querySelectorAll('.contact').forEach((function(x){ x.setAttribute("href","/#contact");}))
+
+      }
+     })  
+</script>

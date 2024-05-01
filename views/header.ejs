@@ -1,0 +1,50 @@
+<div class="header">
+  <div class="row">
+    <a href="/" class="col-8  m-auto d-none d-lg-block">
+      <img class="header-icon" src="route2comply.jpg" alt="route to comply icon" />
+    </a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="col-4 container d-none d-lg-block">
+      <div class="row ">
+        <ul class="nav">
+          <li class="nav-item">
+            <a href="/about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item ">
+            <a href="#services" class="nav-link services">Services</a>
+
+          </li>
+          <li class="nav-item ">
+            <a href="#contact" class="nav-link contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="d-flex d-md-none">
+      <a href="/" class="col-2">
+        <img class="header-icon" src="route2comply.jpg" alt="route to comply icon" />
+      </a>
+      <div id="header-menu-icon" class=" col-10">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <rect width="40" height="40" rx="20"></rect>
+          <rect x="12" y="14" width="18" height="2" rx="1" fill="#333333"></rect>
+          <rect x="12" y="19" width="18" height="2" rx="1" fill="#333333"></rect>
+          <rect x="12" y="24" width="18" height="2" rx="1" fill="#333333"></rect>
+        </svg>
+      </div>
+
+      <button class="btn header-mobile-menu-close d-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M0.292892 1.70712L6.58579 8.00001L0.292892 14.2929L1.70711 15.7071L8 9.41423L14.2929 15.7071L15.7071 14.2929L9.41421
+           8.00001L15.7071 1.70712L14.2929 0.292908L8 6.5858L1.70711 0.292908L0.292892 1.70712Z" fill="#333333"></path>
+        </svg>
+      </button>
+
+      <div class="">
+        <%- include('sidebar') %>
+      </div>
+    </div>
+  </div>
+  <%- include('sidebar-functions') %>
+</div>

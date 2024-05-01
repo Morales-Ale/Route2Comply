@@ -1,0 +1,291 @@
+body {
+  padding: 0 5% 5% 5%;
+  font-family: Helvetica;
+}
+
+.header {
+  background-color: #5A876C;
+  height: 50px;
+  font-family: Helvetica;
+  border-radius: 5px;
+  position: fixed;
+  width: 90%;
+  padding: 5px;
+  z-index: 2;
+  top: 0;
+}
+
+.head-links {
+  justify-content: end;
+}
+
+.header-link {
+  text-align: end;
+  margin: auto;
+}
+
+.header-icon {
+  transform: scale(.5);
+  border-radius: 150px;
+  position: fixed;
+  top: -75px;
+  left: -20px;
+}
+
+#header-menu-icon{
+  text-align: end;
+}
+
+.main-img-container {
+  position: relative;
+  text-align: center;
+  margin: 100px 0;
+}
+
+.main-img-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  height: -webkit-fill-available;
+}
+
+h1 {
+  font-size: 7.5rem !important;
+}
+
+.main-message {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+#services {
+  text-align: center;
+  margin: 25px;
+}
+
+#services .container {
+  height: 500px;
+}
+
+.card-body {
+  height: 250px;
+  text-align: center;
+}
+
+#contact {
+  text-align: center;
+  margin: 50px 0;
+}
+
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 20px;
+  display: flex;
+  float: inline-end;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.contact-container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  height: 530px;
+
+}
+
+
+.mobile-icon {
+  margin: auto;
+  display: block;
+}
+
+.mobile-nav-menu {
+
+  float: inline-end;
+}
+
+
+
+.topnav {
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.card {
+  height: 500px !important;
+  width: 100%;
+}
+
+.card-body img {
+  width: 100%;
+  padding: 20px 0;
+}
+
+@media only screen and (max-width: 991px) {
+  .header {
+    background-color: #5A876C;
+    height: 50px;
+    font-family: Helvetica;
+    border-radius: 5px;
+    margin: 0;
+    padding: auto;
+  }
+
+  .header-icon {
+    transform: scale(.3);
+    border-radius: 150px;
+    position: fixed;
+    top: -105px;
+    left: -85px;
+    z-index: 3;
+  }
+
+ 
+  .card {
+    margin: 50px 0;
+  }
+
+  .nav-link {
+    color: black !important;
+    font-weight: 600 !important;
+  }
+  
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  .main-img-container{
+    margin: 150px 0;
+  }
+  .main-img-container img{
+    transform: scaleY(2);
+  }
+  .main-message {
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+
+
+
+/* Example CSS for mobile sidebar */
+.mobile-sidebar {
+  position: fixed;
+  top: 50px;
+  right: -200px; /* Initially hidden */
+ 
+  height: 100%;
+  background-color: #fff;
+  transition: left 0.3s ease; /* Smooth transition */
+  z-index: 2; /* Ensure it's above other content */
+  opacity: 95%;
+}
+
+.mobile-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-sidebar li {
+  padding: 10px;
+
+  margin: 15px 0 25px 0 ;
+}
+
+.mobile-sidebar a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 25px;
+  text-align: end;
+}
+
+/* Show the sidebar when the menu icon is clicked */
+.sidebar-open .mobile-sidebar {
+  right: 0;
+  width: 100%;
+}
+
+
+
+
+
+
+  
+}
+
+
+h3 {
+  text-align: center;
+}
+
+#about {
+  margin: 100px 0 20px 0;
+}
+#about div{
+  margin-bottom: 20px;
+}
+
+#cc {
+  text-align: end;
+}
+
+#cc img {
+  width: 200px;
+  margin: 25px;
+  border-radius: 20px;
+}
+
+#social {
+  width: 300px;
+  text-align: center;
+  margin: auto !important;
+}
+
