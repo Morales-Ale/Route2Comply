@@ -10,74 +10,89 @@
 </head>
 
 <body>
- 
+
   <%- include('header') %>
+    <%- include('main-img') %>
 
-  <div class="col-12 main-img-container ">
-      <img src="Picture1.jpg" class="opacity-50 w-100 rounded" alt="fresh produce " />
-      <div class="main-img-text">
-        <h1>Route to Comply</h1>
 
-        <p class="main-message">Your ideal partner for a seemless audit process</p>
+      <div id="content">
+
+        <div id="info">
+
+          <div>
+            Produce audit compliance serves as a vital safeguard for the integrity of the agricultural industry, ensuring that
+            sustainability, organics, and food safety standards are met consistently. Route2Comply, Inc. recognizes the paramount
+            importance of these aspects and offers tailored solutions to support produce companies in their compliance efforts.
+            Through proactive collaboration and expertise in audit procedures, Route2Comply aids producers in navigating the
+            intricate landscape of regulations and industry guidelines. By aligning with Route2Comply, companies can enhance their
+            ability to maintain the highest standards of quality and safety throughout their operations. From facilitating organic
+            certification processes to implementing robust food safety protocols, Route2Comply stands as a trusted partner dedicated
+            to empowering producers to achieve and exceed compliance expectations while fostering a culture of sustainability and
+            excellence within the industry.
+          </div>
+
+        </div>
+
+
+
+        <h2 id="services">Our Services </h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <img src="safety.jpg" />
+                  <h5 class="card-title">Audit Readiness </h5>
+                  <p class="card-text"> Preparing and updating programs to run efficiently and comply with GFSI/non-GFSI
+                    standards..</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <img src="usda.jpg" />
+                  <h5 class="card-title"> </h5>
+                  <p class="card-text">Assistance with SOE readiness, organic fraud prevention plans, and more.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-12">
+              <div class="card">
+                <div class="card-body">
+                  <img src="sustainability.png" />
+                  <h5 class="card-title">Sustainability and/or Pollinator commitments</h5>
+                  <p class="card-text">Helping companies comply with requirements from Wal-Mart, Kroger, and Whole
+                    Foods,
+                    and
+                    others. This can involve utilizing the Sustainability Standard, PrimusGFS Module 9 - IPM, USDA
+                    Organic.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 id="contact">Send Us a Message </h2>
+
+
+        <div class="contact-container">
+          <form action="/send_email" method="post">
+            <label for="email">email adress</label>
+            <input type="text" id="email" name="email" placeholder="Your email..">
+
+            <label for="name"> Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name..">
+
+            <label for="message">Subject</label>
+            <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+
       </div>
-    </div>
-
-    <h2 id="services">Our Services </h2>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-12">
-          <div class="card">
-            <div class="card-body">
-              <img src="safety.jpg" />
-              <h5 class="card-title">Audit Readiness </h5>
-              <p class="card-text"> Preparing and updating programs to run efficiently and comply with GFSI/non-GFSI
-                standards..</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-12">
-          <div class="card">
-            <div class="card-body">
-              <img src="usda.jpg" />
-              <h5 class="card-title"> </h5>
-              <p class="card-text">Assistance with SOE readiness, organic fraud prevention plans, and more.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-12">
-          <div class="card">
-            <div class="card-body">
-              <img src="sustainability.png" />
-              <h5 class="card-title">Sustainability and/or Pollinator commitments</h5>
-              <p class="card-text">Helping companies comply with requirements from Wal-Mart, Kroger, and Whole Foods,
-                and
-                others. This can involve utilizing the Sustainability Standard, PrimusGFS Module 9 - IPM, USDA Organic.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <h2 id="contact">Send Us a Message </h2>
-
-
-    <div class="contact-container">
-      <form action="/send_email" method="post">
-        <label for="email">email adress</label>
-        <input type="text" id="email" name="email" placeholder="Your email..">
-
-        <label for="name"> Name</label>
-        <input type="text" id="name" name="name" placeholder="Your full name..">
-
-        <label for="message">Subject</label>
-        <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
-
-        <input type="submit" value="Submit">
-      </form>
-    </div>
-
-  
 </body>
 
 </html>

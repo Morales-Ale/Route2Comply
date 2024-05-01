@@ -6,11 +6,20 @@ const port = 3000;
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.json());
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({ extended: true }));
 
+app.use(function (req, res, next) {
+    let domain = `${req.protocol}://${req.hostname}`;
+
+    domain = domain.replace(/http/, 'https');
+
+    res.locals.domain = domain;
+
+    next();
+});
 
 app.get('/', (req, res) => {
- res.render("main");
+    res.render("main");
 });
 
 app.get('/about', (req, res) => {
@@ -21,42 +30,42 @@ app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
 });
 
-app.post("/send_email", function(req, response){
+app.post("/send_email", function (req, response) {
 
- 
+
 
     const transporter = nodemailer.createTransport({
-        
-          port: 587,
-  secure: false,
-        service :'gmail', 
-        auth:{
-        user: 'alejandramoralesestrada@gmail.com',
-        pass:'gtud tdts egyj gmcj'
-     }
+
+        port: 587,
+        secure: false,
+        service: 'gmail',
+        auth: {
+            user: 'alejandramoralesestrada@gmail.com',
+            pass: 'gtud tdts egyj gmcj'
+        }
 
     });
 
     // async..await is not allowed in global scope, must use a wrapper
-async function main() {
-    const from = req.body.email;
-    const name = req.body.name;
-    const message = req.body.message;
-    // send mail with defined transport object
-    const info = await transporter.sendMail({
-        from:'contact@route2comply.com' , 
-        to: 'alejandramoralesestrada@gmail.com', 
-        subject:`Contact request from ${name}` , 
-        text:
-        ` Client email  ${from} 
+    async function main() {
+        const from = req.body.email;
+        const name = req.body.name;
+        const message = req.body.message;
+        // send mail with defined transport object
+        const info = await transporter.sendMail({
+            from: 'contact@route2comply.com',
+            to: 'alejandramoralesestrada@gmail.com',
+            subject: `Contact request from ${name}`,
+            text:
+                ` Client email  ${from} 
           Client name  ${name} 
           Message:  ${message} `
-    });
-  
-    console.log("Message sent: %s", info);
-  }
-  
-  main().catch(console.error);
-  
+        });
+
+        console.log("Message sent: %s", info);
+    }
+
+    main().catch(console.error);
+
 
 })
