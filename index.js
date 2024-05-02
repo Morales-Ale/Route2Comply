@@ -1,6 +1,5 @@
 import express from 'express';
 import nodemailer from 'nodemailer';
-import  dotenv from 'dotenv';
 const app = express();
 const port = 3000;
 // Set EJS as the view engine
@@ -40,7 +39,7 @@ app.post("/send_email", function (req, response) {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user:'support@route2comply.com',
+            user: 'support@route2comply.com',
             pass: 'gktv hhhb ojly qida'
         }
     });
