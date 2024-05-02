@@ -1,5 +1,6 @@
 import express from 'express';
 import nodemailer from 'nodemailer';
+import  dotenv from 'dotenv';
 const app = express();
 const port = 3000;
 // Set EJS as the view engine
@@ -32,40 +33,35 @@ app.listen(port, () => {
 
 app.post("/send_email", function (req, response) {
 
-
+    const from = req.body.email;
+    const name = req.body.name;
+    const message = req.body.message;
 
     const transporter = nodemailer.createTransport({
-
-        port: 587,
-        secure: false,
         service: 'gmail',
         auth: {
-            user: 'alejandramoralesestrada@gmail.com',
-            pass: 'gtud tdts egyj gmcj'
+            user:'support@route2comply.com',
+            pass: 'gktv hhhb ojly qida'
         }
-
     });
-
-    // async..await is not allowed in global scope, must use a wrapper
-    async function main() {
-        const from = req.body.email;
-        const name = req.body.name;
-        const message = req.body.message;
-        // send mail with defined transport object
-        const info = await transporter.sendMail({
-            from: 'contact@route2comply.com',
-            to: 'alejandramoralesestrada@gmail.com',
-            subject: `Contact request from ${name}`,
-            text:
-                ` Client email  ${from} 
+    const mailOptions = {
+        from: from,
+        to: 'support@route2comply.com',
+        subject: `Contact request from ${name}`,
+        text:
+            ` Client email  ${from} 
           Client name  ${name} 
           Message:  ${message} `
-        });
-
-        console.log("Message sent: %s", info);
     }
 
-    main().catch(console.error);
+    transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+            console.log("Error: ", error);
+        } else {
+            console.log("Message sent:", info);
+        }
+          response.redirect("/");
 
-
+    })
+   
 })
